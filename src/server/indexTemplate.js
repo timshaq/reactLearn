@@ -1,0 +1,13 @@
+export const indexTemplate = (content) => `
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>React Learn</title>
+  </head>
+  <script src="/static/client.js" type="application/javascript"></script>
+  <body>
+    <div id="react_root">${content}</div>
+  </body>
+</html>
+`;
