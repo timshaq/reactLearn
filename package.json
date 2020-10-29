@@ -6,7 +6,7 @@
   "scripts": {
     "build:dev": "cross-env NODE_ENV=development webpack --config webpack.config.js --progress --colors",
     "build:prod": "cross-env NODE_ENV=production webpack --config webpack.config.js --progress --colors",
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --progress --colors",
+    "dev": "cross-env NODE_ENV=development node ./bin/dev.js --progress --colors",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,13 +20,18 @@
   },
   "homepage": "https://github.com/timshaq/reactLearn#readme",
   "devDependencies": {
+    "@hot-loader/react-dom": "^17.0.0",
+    "clean-webpack-plugin": "^3.0.0",
     "cross-env": "^7.0.2",
     "html-webpack-plugin": "^4.5.0",
+    "react-hot-loader": "^4.13.0",
     "ts-loader": "^8.0.4",
     "typescript": "^4.0.3",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12",
+    "webpack-dev-middleware": "^4.0.0",
     "webpack-dev-server": "^3.11.0",
+    "webpack-hot-middleware": "^2.25.0",
     "webpack-node-externals": "^2.5.2"
   },
   "dependencies": {
