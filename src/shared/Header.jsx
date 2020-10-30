@@ -5,8 +5,11 @@ import styles from './header.less';
 function HeaderComponent() {
   return (
     <header>
-      <h1 className={styles.title}>H1 Header</h1>
-      <button className={styles.btn}>Click</button>
+      <h1 className={styles.title}>
+        Hello React
+        <div className={styles['title-mask']}>Hello React</div>
+      </h1>
+      <button className={styles.btn}>Button</button>
     </header>
   )
 };
