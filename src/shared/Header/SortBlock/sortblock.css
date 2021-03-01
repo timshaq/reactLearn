@@ -4,6 +4,13 @@
     border-radius: 7px;
     margin: 0 0 20px;
 }
+.svg {
+    width: 9px;
+    height: 11px;
+}
+.svg path {
+    fill: var(--orange);
+}
 
 @media all and (min-width: 1024px) {
     .sortBlock {
@@ -12,4 +19,12 @@
         margin: 0;
         border-radius: 0;
     }
+    .svg {
+        width: 14px;
+        height: 16px;
+    }
+}
+
+
+@media all and (min-width: 1540px) {
 }

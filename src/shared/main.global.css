@@ -14,54 +14,92 @@
     --gray99: hsl(0, 0%, calc(var(--whiteLightness) - 40%));
     --gray66: hsl(0, 0%, calc(var(--whiteLightness) - 60%));
 }
-
-body {
+/*    <NULL>    */
+* {
     padding: 0;
     margin: 0;
-    background-color: var(--grayF4);
-    font-size: 14px;
-    line-height: 16px;
-    font-family: 'Roboto', serif;
-}
-
-* {
+    border: 0;
     color: var(--black);
-    box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-}
+  }
+  
+  *, *:before, *:after {
+    box-sizing: border-box;
+  }
+  
+  *:focus, *:active {
+    outline: none;
+  }
+  
+  a:focus, a:active {
+    outline: none;
+  }
+  
+  nav, footer, header, aside {
+    display: block;
+  }
 
-ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-}
-
-button {
+  body {
+      padding: 0;
+      margin: 0;
+      background-color: var(--grayF4);
+      font-size: 14px;
+      line-height: 16px;
+      font-family: 'Roboto', serif;
+  }
+  
+  html, body {
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  html {
+    overflow-x: hidden;
+  }
+  
+  input, button, textarea {
+    font-family: inherit;
+  }
+  
+  input::-ms-clear {
+    display: none;
+  }
+  
+  button {
+    cursor: pointer;
+    background: transparent;
+  }
+  
+  button::-moz-focus-inner {
     padding: 0;
     border: 0;
-    background: transparent;
-    cursor: pointer;
-}
-
-.controls {
-    padding: 10px 20px;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-}
-.karmaCounter > * + * {
-    padding: 0 0 0 4px;
-}
-
-.karmaValue {
-    color: var(--grayC4)
-}
-
-svg.down {
-    transform: rotate(180deg);
-}
+  }
+  
+  a, a:visited {
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: none;
+  }
+  
+  ul li {
+    list-style: none;
+  }
+  
+  img {
+    vertical-align: top;
+    max-width: 100%;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: 400;
+  }
+  
+  /*    </NULL>    */

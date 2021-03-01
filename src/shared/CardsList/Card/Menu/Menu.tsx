@@ -1,5 +1,22 @@
 import React from 'react';
 import styles from './menu.css';
+import {generateId} from "../../../../utils/react/generateRandomIndex";
+import {GenericList} from "../../../GenericList";
+import {merge} from "../../../../utils/js/merge";
+
+const handleItemClick = (id: string) => console.log('click to ', id);
+
+const LIST = [
+    { text: 'Комментарии' },
+    { text: 'Поделиться' },
+    { text: 'Скрыть' },
+    { text: 'Сохранить' },
+    { text: 'Пожаловаться' },
+].map(generateId)
+    .map(merge({
+        onClick: handleItemClick,
+        className: 'menuItem',
+    }));
 
 export function Menu() {
   return (
@@ -11,6 +28,8 @@ export function Menu() {
         <circle cx="2.5" cy="17.5" r="2.5" fill="#D9D9D9"/>
       </svg>
       </button>
+
+      <GenericList list={LIST} />
     </div>
   );
 }

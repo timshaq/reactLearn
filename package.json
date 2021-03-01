@@ -44,6 +44,8 @@
     "webpack-node-externals": "^2.5.2"
   },
   "dependencies": {
+    "@types/classnames": "^2.2.11",
+    "classnames": "^2.2.6",
     "express": "^4.17.1",
     "nodemon": "^2.0.6",
     "react": "^16.13.1",
