@@ -7,3 +7,10 @@
     height: 100%;
     object-fit: cover;
 }
+@media all and (min-width: 1024px) {
+    .preview {
+        min-height: 100%;
+        height: 100%;
+        flex: 1 2;
+    }
+}

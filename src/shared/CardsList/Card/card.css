@@ -5,7 +5,7 @@
     flex-flow: row wrap;
     position: relative;
 }
-.card > *, .textContent >* {
+.card > *, .textContent > * {
     flex: 1 1 100%;
 }
 .textContent {
@@ -41,8 +41,16 @@
     .controls {
         order: 3;
         flex: 0 0;
-        margin: 0 0 0 24px;
         padding: 0;
+    }
+    .card {
+        flex-flow: row;
+        height: 107px;
+        align-items: center;
+     }
+    .textContent {
+        order: 2;
+        flex: 6 1;
     }
 }
 
