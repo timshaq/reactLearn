@@ -5,13 +5,19 @@ import {Layout} from './Layout';
 import {Header} from './Header';
 import {Content} from './Content';
 import {CardsList} from './CardsList';
-import {Dropdown} from "./Dropdown";
+import { EIcon, Icon } from './Icon';
 
 function AppComponent() {
     return (
         <Layout>
             <Header />
             <Content>
+                <br/>
+                {"test Icon component: name={EIcon.save} size={30}"}
+                <br/>
+                result: <Icon name={EIcon.save} size={30}/>
+                <br/>
+
                 <CardsList />
             </Content>
         </Layout>

@@ -1,0 +1,33 @@
+.menuItemsList {
+    padding: 0 20px;
+}
+
+.menuItem {
+    padding: 12px 0;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+.menuItem:not(:last-child) {
+    position: relative;
+}
+.menuItem:not(:last-child):before {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: var(--grayEC);
+    position: absolute;
+    bottom: 0px;
+}
+.menuItem > svg + span {
+    margin-left: 7px;
+}
+.mobHidden {
+    display: none;
+}
+
+@media all and (min-width: 1024px) {
+    .mobHidden {
+        display: list-item;
+    }
+}

@@ -20,9 +20,23 @@
     background-color: rgba(51, 51, 51, 0.1);
 }
 .menuItem {
-    color: var(--grayC4);
+    color: var(--gray99);
     padding: 9px 0;
 
+}
+.dropdown {
+    position: absolute;
+    right: 0;
+    top: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,.15);
+    border-radius: 3px;
+    background-color: var(--white);
+}
+.closeButton {
+    background-color: var(--grayD9);
+    padding: 12px 33px;
+    border-radius: 0 0 3px 3px;
+    width: 100%;
 }
 @media all and (min-width: 1024px) {
     .menuButton {
@@ -34,6 +48,12 @@
         right: 50px;
         transform: translateY(-50%);
     }
+
+    .dropdown {
+        top: 20px;
+        right: 50%;
+        transform: translateX(50%);
+    }
 }
 
 @media all and (min-width: 1540px) {
@@ -42,5 +62,8 @@
     }
     .menu {
         right: 150px;
+    }
+    .closeButton {
+        display: none;
     }
 }

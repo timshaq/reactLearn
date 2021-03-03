@@ -1,0 +1,4 @@
+.svgContainer svg {
+    width: inherit;
+    height: inherit;
+}
