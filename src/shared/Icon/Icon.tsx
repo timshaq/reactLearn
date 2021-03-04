@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './icon.css';
-import { CommentIcon, ShareIcon, BlockIcon, SaveIcon, WarningIcon } from '../icons';
+import {CommentIcon, ShareIcon, BlockIcon, SaveIcon, WarningIcon, MenuIcon, AnonimIcon} from '../icons';
 
 export enum EIcon {
   comment = 'commentIcon',
@@ -8,6 +8,8 @@ export enum EIcon {
   block = 'blockIcon',
   save = 'saveIcon',
   warning = 'warningIcon',
+  menu = 'menuIcon',
+  anonim = 'anonimIcon',
 }
 interface IIconsList {
   [N: string]: React.ComponentType;
@@ -18,6 +20,8 @@ const iconsList:IIconsList = {
   blockIcon: BlockIcon,
   saveIcon: SaveIcon,
   warningIcon: WarningIcon,
+  menuIcon: MenuIcon,
+  anonimIcon: AnonimIcon,
 }
 
 interface IIconsProps {

@@ -9,7 +9,13 @@ app.use('/static', express.static('./dist/client'));
 
 app.get('/', (req, res) => {
   res.send(
-    indexTemplate(ReactDOM.renderToString(App())),
+      indexTemplate(ReactDOM.renderToString(App())),
+  );
+});
+
+app.get('/auth', (req, res) => {
+  res.send(
+      indexTemplate(ReactDOM.renderToString(App())),
   );
 });
 
