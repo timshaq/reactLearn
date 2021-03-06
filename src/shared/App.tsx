@@ -5,23 +5,28 @@ import {Layout} from './Layout';
 import {Header} from './Header';
 import {Content} from './Content';
 import {CardsList} from './CardsList';
-import { EIcon, Icon } from './Icon';
+import { useToken } from '../hooks/useToken';
+import {tokenContext} from "./context/tokenContext";
+import { UserContextProvider } from './context/userContext';
+import { PostsContextProvider } from './context/postsContext';
 
 function AppComponent() {
-    return (
-        <Layout>
-            <Header />
-            <Content>
-                <br/>
-                {"test Icon component: name={EIcon.save} size={30}"}
-                <br/>
-                result: <Icon name={EIcon.save} size={30}/>
-                <br/>
+    const [token] = useToken();
 
-                <CardsList />
-            </Content>
-        </Layout>
-    )
+    return (
+        <tokenContext.Provider value={token}>
+            <UserContextProvider>
+                <PostsContextProvider>
+                    <Layout>
+                        <Header/>
+                        <Content>
+                            <CardsList />
+                        </Content>
+                    </Layout>
+                </PostsContextProvider>
+            </UserContextProvider>
+        </tokenContext.Provider>
+)
 }
 
-export const App = hot(AppComponent);
+export const App = hot(() => <AppComponent />);

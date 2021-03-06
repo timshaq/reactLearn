@@ -3,7 +3,6 @@ import styles from './header.css';
 import { SearchBlock } from './SearchBlock';
 import { ThreadTitle } from './ThreadTitle';
 import { SortBlock } from './SortBlock';
-import {UserBlock} from "./UserBlock";
 
 export function Header() {
   return (
@@ -11,7 +10,6 @@ export function Header() {
       <SearchBlock />
       <ThreadTitle />
       <SortBlock />
-      <UserBlock />
     </header>
   );
 }

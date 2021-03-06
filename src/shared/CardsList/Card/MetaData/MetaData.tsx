@@ -1,24 +1,31 @@
 import React from 'react';
+import { unixToTimeAgo } from '../../../../utils/js/unixToTimeAgo';
 import styles from './metadata.css';
 
-export function MetaData() {
+interface IMetaDateProps {
+    //avatarSrc: string;
+    username: string;
+    created: number;
+}
+
+export function MetaData({ username, created }:IMetaDateProps) {
   return (
     <div className={styles.metaData}>
       <div className={styles.userLink}>
         <img
           className={styles.avatar}
-          src="https://tr-static.eodev.com/files/d78/1f67fb10f8ac282353050840efe48e5d.png"
+          src="http"
           alt="avatar"
         />
         <a href="#user-url" className={styles.userName}>
-          Дмитрий Гришин
+            { username }
         </a>
       </div>
       <span className={styles.createdAt}>
         <span className={styles.publishedLabel}>
           опубликовано&nbsp;
         </span>
-        4 часа назад
+          { unixToTimeAgo(created) }
       </span>
   </div>
   );

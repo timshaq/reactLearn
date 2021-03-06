@@ -1,6 +1,6 @@
 import React from 'react';
-import { AnonimIcon } from '../../icons';
-import { EColor, Text } from '../../Text';
+import { AnonimIcon } from '../../../icons';
+import { EColor, Text } from '../../../Text';
 import styles from './userblock.css';
 
 interface IUserBlockProps {
@@ -16,7 +16,6 @@ const apiDuration = 'permanent';
 const apiScope = 'identity read submit'
 
 export function UserBlock({ avatarSrc, userName }:IUserBlockProps) {
-  console.log(apiClientId);
   return (
       <a
           href={`https://www.reddit.com/api/v1/authorize?client_id=${apiClientId}&response_type=${apiResponseType}&state=${apiRandomString}&redirect_uri=${apiRedirectUri}&duration=${apiDuration}&scope=${apiScope}`}
